@@ -19,6 +19,7 @@ class CharacterSelectionState extends MusicBeatState //This is not from the D&B 
 {
 	public var characterData:Array<Dynamic> = [
         [[["Boyfriend", 'bf'], ["Pixel Boyfriend", 'bf-pixel']], [1.0, 1.0, 1.0, 1.0]], 
+        [[["Gold Bambi", 'gold-bambi'], ["Pixel Boyfriend", 'bf-pixel']], [1.0, 1.0, 1.0, 1.0]], 
         [[["Bambi", 'bambi'], ["Bambi (Angry)", 'mewhennopizzarolls'], ["Bambi (Overthink)", 'bambioverthink'], ["Bambi (Mad)", 'mareloangry'], ["Bambi (God)", 'kalmpokebam'],  ["Bambi (Old)", 'bambiold'], ["Epitome", 'epitomeMan']], [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]],
         [[["Expunged", '3dbambi'], ["Expunged (Unfair)", 'unfairbambi'], ["Expunged (Opposition)", 'oppositionexpunged'], ["Expunged (Thearchy)", 'thearchyexpunged'], ["Expunged (Phono)", 'phonophobiaexpunged'], ["Expunged (Green)", 'newgreen'], ["Expunged (Theoretical)", 'TheorExpunged']], [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]],
         [[["HELLBREAKER", 'hellbreaker']], [1.0, 1.0]],
