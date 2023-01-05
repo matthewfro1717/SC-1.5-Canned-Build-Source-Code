@@ -381,7 +381,7 @@ class MainMenuState extends MusicBeatState
 								
 	override function beatHit() {
 		super.beatHit();
-		
+	
 		if (FlxG.camera.zoom < 1.35 && ClientPrefs.camZooms && curBeat % 1 == 0) // the funni camera zoom each beat
 			FlxG.camera.zoom += 0.015;
 	}
