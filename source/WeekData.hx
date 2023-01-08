@@ -22,16 +22,26 @@ typedef WeekFile =
 	var weekName:String;
 	var freeplayColor:Array<Int>;
 	var startUnlocked:Bool;
-	var hiddenUntilUnlocked:Bool;
 	var hideStoryMode:Bool;
 	var hideFreeplay:Bool;
-	var difficulties:String;
 }
 
 class WeekData {
 	public static var weeksLoaded:Map<String, WeekData> = new Map<String, WeekData>();
 	public static var weeksList:Array<String> = [];
 	public var folder:String = '';
+	
+	// JSON variables
+	public var songs:Array<Dynamic>;
+	public var weekCharacters:Array<String>;
+	public var weekBackground:String;
+	public var weekBefore:String;
+	public var storyName:String;
+	public var weekName:String;
+	public var freeplayColor:Array<Int>;
+	public var startUnlocked:Bool;
+	public var hideStoryMode:Bool;
+	public var hideFreeplay:Bool;
 
 	public static function createWeekFile():WeekFile {
 		var weekFile:WeekFile = {
@@ -43,16 +53,14 @@ class WeekData {
 			weekName: 'Custom Week',
 			freeplayColor: [146, 113, 253],
 			startUnlocked: true,
-			hiddenUntilUnlocked: false,
 			hideStoryMode: false,
-			hideFreeplay: false,
-			difficulties: ''
+			hideFreeplay: false
 		};
 		return weekFile;
 	}
 
 	// HELP: Is there any way to convert a WeekFile to WeekData without having to put all variables there manually? I'm kind of a noob in haxe lmao
-	public function new(weekFile:WeekFile, fileName:String) {
+	public function new(weekFile:WeekFile) {
 		songs = weekFile.songs;
 		weekCharacters = weekFile.weekCharacters;
 		weekBackground = weekFile.weekBackground;
@@ -61,12 +69,8 @@ class WeekData {
 		weekName = weekFile.weekName;
 		freeplayColor = weekFile.freeplayColor;
 		startUnlocked = weekFile.startUnlocked;
-		hiddenUntilUnlocked = weekFile.hiddenUntilUnlocked;
 		hideStoryMode = weekFile.hideStoryMode;
 		hideFreeplay = weekFile.hideFreeplay;
-		difficulties = weekFile.difficulties;
-
-		this.fileName = fileName;
 	}
 
 	public static function reloadWeekFiles(isStoryMode:Null<Bool> = false)
